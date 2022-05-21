@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../interface/.idea/interface.iml" filepath="$PROJECT_DIR$/../interface/.idea/interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/recipeFramework.iml" filepath="$PROJECT_DIR$/.idea/recipeFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../recipeinterface/.idea/recipeinterface.iml" filepath="$PROJECT_DIR$/../recipeinterface/.idea/recipeinterface.iml" />
     </modules>
   </component>
 </project>
