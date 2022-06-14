@@ -1,0 +1,23 @@
+
+.logo {
+    border-radius: 50%;
+    width: 15%;
+    max-width: 50px;
+}
+
+.title {
+    margin: 0 0 0 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar .title {
+    margin-left: 1rem;
+    font-size: 8vw;
+    color: dimgrey;
+
+}
