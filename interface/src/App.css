@@ -1,23 +1,91 @@
 
-.logo {
-    border-radius: 50%;
-    width: 15%;
-    max-width: 50px;
+:root  {
+    --title-fs: 3rem;
+    --primary-color: #ebd2cc;
+    --text-color: dimgrey;
 }
 
-.title {
-    margin: 0 0 0 0;
+@media (max-width: 40em) {
+    :root {
+        --title-fs: 2rem;
+    }
 }
 
 .navbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar__group {
     display: flex;
     align-items: center;
     padding: 1rem;
 }
 
-.navbar .title {
-    margin-left: 1rem;
-    font-size: 8vw;
-    color: dimgrey;
+@media (max-width: 40em) {
+     .navbar__group:not(:first-child) {
+        display: none;
+     }
+}
+
+.navbar__group:nth-last-of-type(2) {
+    flex-grow: 1;
+}
+
+.navbar__logo {
+    border-radius: 50%;
+    max-width: 64px;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 40em) {
+    .navbar__logo {
+        max-width: 48px;
+    }
+}
+
+.navbar__title {
+    margin: 0 0 0 1rem;
+    font-size: var(--title-fs);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    white-space: normal;
+    white-space: nowrap;
+}
+
+.navbar__item {
+    background-color: var(--primary-color);
+    padding: 12px 20px;
+    border-radius: 999px;
+    margin: 3px 15px 5px 15px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
 
 }
+
+.navbar__item div {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item span {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.navbar__item p {
+    margin: 0 0 0 0;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.navbar__user {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+
