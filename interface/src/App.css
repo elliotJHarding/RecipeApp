@@ -5,6 +5,7 @@
     --text-color: dimgrey;
 }
 
+
 @media (max-width: 40em) {
     :root {
         --title-fs: 2rem;
@@ -16,21 +17,38 @@
     justify-content: flex-start;
 }
 
-.navbar__group {
-    display: flex;
-    align-items: center;
+.navbar > * {
     padding: 1rem;
 }
 
-@media (max-width: 40em) {
-     .navbar__group:not(:first-child) {
-        display: none;
-     }
+.navbar__group {
+    display: flex;
+    align-items: center;
 }
 
-.navbar__group:nth-last-of-type(2) {
+.navbar__menu {
+    display: none;
+}
+
+@media (max-width: 40em) {
+
+    .navbar__group:first-child {
+        flex-grow: 1;
+    }
+
+    .navbar__menu {
+        display: block;
+    }
+}
+
+.navbar__links {
+    width: 100%;
+}
+
+.navbar__spacer {
     flex-grow: 1;
 }
+
 
 .navbar__logo {
     border-radius: 50%;
@@ -86,6 +104,58 @@
     display: flex;
     align-items: center;
     padding: 1rem;
+}
+
+.navbar__menu__button {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu__button span{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+@media(max-width: 40em) {
+    .navbar__links {
+        position: absolute;
+        bottom:0;
+        display:flex;
+        padding: 0;
+        width: 100%;
+
+    }
+
+    .navbar__links .navbar__item div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar__links p {
+        font-size: 0.7rem;
+    }
+
+    .navbar__links .navbar__item span {
+        margin: 0;
+    }
+
+    .navbar__links .navbar__item {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .navbar__links .navbar__group {
+        justify-content: center;
+    }
+
+    .navbar__brand, .navbar__menu {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar__spacer {
+        flex-grow: 0;
+    }
 }
 
 
